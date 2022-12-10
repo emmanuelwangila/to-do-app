@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-josefin bg-[#fafafa] dark:bg-[#161722] transition-colors;
+    }
+}
+@layer components {
+    #checked {
+        @apply bg-origin-border bg-gradient-to-tl from-purple-500 to-blue-500 border-transparent;
+    }
+    #checked + p {
+        @apply text-[#9394a5] line-through decoration-[#484b6a];
+    }
+    .status-items {
+        @apply cursor-pointer hover:text-[#484b6a] dark:hover:text-[#e4e5f1] transition-colors;
+    }
+    .status-items#active {
+        @apply text-blue-500;
+    }
+}
